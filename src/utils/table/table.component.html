@@ -1,0 +1,13 @@
+<div>
+  <table class="table align-middle mb-0 bg-white"  style="border: 2px solid #000;">
+    <thead class="bg-light">
+      <tr >
+        <th *ngFor="let header of tableHeaders" scope="col">{{header}}</th>
+      </tr>
+    </thead>
+    <tr *ngFor="let item of inputData" >
+      <td>{{item.name}}</td>
+      <td>{{item.amount}}</td>
+    </tr>
+  </table>
+</div>

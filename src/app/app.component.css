@@ -1,0 +1,70 @@
+.full-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ADEFD1FF;
+}
+
+.full-page .get-input input,
+.full-page label {
+  color: #00203FFF;
+  font-weight: 800;
+}
+
+.full-page span {
+  padding-bottom: 40px;
+  color: #ADEFD1FF;
+  font-size: large;
+  padding-left: 15px;
+  font-weight: bold;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  background-color: #00203FFF;
+  height: 7%;
+}
+
+
+input {
+  border: 50px;
+}
+
+.pr-0{
+  padding-right: 0%;
+
+}
+.pl-0{
+  padding-left: 0%;
+
+}
+.pt-0{
+  padding-top: 0%;
+
+}
+.pb-0{
+  padding-bottom: 0%;
+
+}
+.nav .tab-cust{
+  background-color: #ADEFD1FF;
+}
+.nav .tab-cust span{
+  color: #00203FFF !important;
+
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}
+
+
+.modal-dialog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Make sure modal covers entire viewport height */
+}
