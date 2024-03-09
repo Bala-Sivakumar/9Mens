@@ -34,6 +34,7 @@ export class AppComponent {
   protected getDetails:ShareDto[]=[];
   protected currentDate = new Date();
   protected currentPage:string='ADD';
+  protected tablemodal:boolean=false;
   protected tableHeaders:Array<String>=['Person','Amount']
 
   constructor(private ApiService: ApiService,private dialog: MatDialog,private modalService: MdbModalService) { }
@@ -57,6 +58,7 @@ export class AppComponent {
       this.homiesDetails.push(person)
       this.loadPersonsByAge(this.homiesDetails!)
     } else {
+      this.tablemodal = true
       this.getPersonsBySharedWith(this.getname);
     }
   }
@@ -104,18 +106,23 @@ protected getPersonsBySharedWith(getname:string): void {
   .subscribe(persons => {
     this.getDetails = persons;
     console.log(this.getDetails)
-    this.openModal(persons);
+    //this.openModal(persons);
   });
 }
 
-
-openModal(getDetails:ShareDto[]) {
-  this.tableModalRef = this.modalService.open(TableComponent, {
-    modalClass: 'cust'
-
-
-  })
-  this.tableModalRef.component.inputData = getDetails ;
-  this.tableModalRef.component.tableHeaders = this.tableHeaders ;
+onclick(){
+  this.tablemodal = false;
 }
+
+
+// openModal(getDetails:ShareDto[]) {
+//   this.tableModalRef = this.modalService.open(TableComponent, {
+//     modalClass: 'center-modal',
+//     //modalDialogClass: 'modal-dialog-centered'
+
+
+//   })
+//   this.tableModalRef.component.inputData = getDetails ;
+//   this.tableModalRef.component.tableHeaders = this.tableHeaders ;
+// }
 }

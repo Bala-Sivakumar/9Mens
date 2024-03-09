@@ -31,6 +31,26 @@
         <input class="btn btn-primary mt-2 cust-btn" type="button" value="View" style="margin-left: 40%;background-color: #00203FFF;color: #ADEFD1FF;" (click)="onSubmit()">
       </div>
 
+      <div *ngIf="tablemodal" class="modal">
+        <div class="parent">
+          <div class="pull-right">
+            <button type="button" style="margin-left: 100%;" class="btn-close" aria-label="Close" (click)="onclick()"></button>
+          </div>
+        </div>
+        <div>
+          <table class="table">
+            <thead class="thead-dark">
+              <tr >
+                <th *ngFor="let header of tableHeaders" scope="col">{{header}}</th>
+              </tr>
+            </thead>
+            <tr *ngFor="let item of getDetails" >
+              <td>{{item.name}}</td>
+              <td>{{item.amount}}</td>
+            </tr>
+          </table>
+        </div>
+      </div>
 
     </div>
   </div>

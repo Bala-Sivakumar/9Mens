@@ -9,5 +9,5 @@ export class PersonDto{
 
 export class ShareDto{
   name: string|undefined;
-  value: number|undefined;
+  amount: number|undefined;
 }

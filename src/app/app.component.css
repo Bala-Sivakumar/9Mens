@@ -68,3 +68,46 @@ input {
   align-items: center;
   height: 100vh; /* Make sure modal covers entire viewport height */
 }
+
+.modal {
+  width: 60%;
+  height: 40%;
+  margin:0 auto;
+  display:table;
+  position: absolute;
+  border-radius: 10px;
+  left: 0;
+  right:0;
+  top: 50%;
+
+  background-color: #ADEFD1FF ;
+  -webkit-transform:translateY(-50%);
+  -moz-transform:translateY(-50%);
+  -ms-transform:translateY(-50%);
+  -o-transform:translateY(-50%);
+  transform:translateY(-50%);
+}
+
+
+.modal table , th{
+  text-align: center;
+  border-radius: 10px;
+  background-color: #00203FFF;
+  color: white;
+}
+
+.modal table , td{
+  text-align: center;
+  border-radius: 10px;
+  background-color: rgb(150, 199, 249);
+  color: white;
+}
+
+.modal .parent {
+  display: flex;
+  flex-direction: column;
+}
+
+.pull-right {
+  margin-top: auto; /* Pushes the div to the end */
+}
